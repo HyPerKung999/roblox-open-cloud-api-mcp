@@ -1,0 +1,172 @@
+[
+  {
+    "id": 2075234661,
+    "name": "Fast Spin",
+    "description": "Shorter Aura Spin animation. The odds stay the same",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 136415498446988,
+    "createdAt": "2026-11-06T13:28:38.136Z",
+    "updatedAt": "2026-11-06T14:02:30.233Z"
+  },
+  {
+    "id": 2075426645,
+    "name": "x2 Lucky Spin",
+    "description": "Doubles the odds of every Aura above Common. Aura Spin only, not Artifacts",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 96383885423460,
+    "createdAt": "2026-11-06T13:28:37.68Z",
+    "updatedAt": "2026-11-06T14:02:31.244Z"
+  },
+  {
+    "id": 2075618639,
+    "name": "+1 Aura Slot",
+    "description": "A second slot to keep an Aura in (you still wear one)",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 104890736885855,
+    "createdAt": "2026-11-06T13:28:37.212Z",
+    "updatedAt": "2026-11-06T14:02:32.206Z"
+  },
+  {
+    "id": 2074802635,
+    "name": "Training x1000",
+    "description": "Unlocks the x1000 training lane",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 89069602941622,
+    "createdAt": "2026-11-06T13:28:36.758Z",
+    "updatedAt": "2026-11-06T14:02:33.177Z"
+  },
+  {
+    "id": 2075558650,
+    "name": "Training x500",
+    "description": "Unlocks the x500 training lane",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 133365874905640,
+    "createdAt": "2026-11-06T13:28:36.294Z",
+    "updatedAt": "2026-11-06T14:02:34.123Z"
+  },
+  {
+    "id": 2074772659,
+    "name": "Training x100",
+    "description": "Unlocks the x100 training lane",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 81065603337714,
+    "createdAt": "2026-11-06T13:28:35.835Z",
+    "updatedAt": "2026-11-06T14:02:35.106Z"
+  },
+  {
+    "id": 2076020618,
+    "name": "Training x50",
+    "description": "Unlocks the x50 training lane",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 119666663271671,
+    "createdAt": "2026-11-06T13:28:35.373Z",
+    "updatedAt": "2026-11-06T14:02:36.053Z"
+  },
+  {
+    "id": 2074496707,
+    "name": "Training x35",
+    "description": "Unlocks the x35 training lane",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 75923960864432,
+    "createdAt": "2026-11-06T13:28:34.918Z",
+    "updatedAt": "2026-11-06T14:02:37.022Z"
+  },
+  {
+    "id": 2075660609,
+    "name": "Training x25",
+    "description": "Unlocks the x25 training lane",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 117287474644729,
+    "createdAt": "2026-11-06T13:28:34.462Z",
+    "updatedAt": "2026-11-06T14:02:38.049Z"
+  },
+  {
+    "id": 2074712655,
+    "name": "Plunger Range +50%",
+    "description": "+50% shot range and rope length",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 107829015924224,
+    "createdAt": "2026-11-06T13:28:33.999Z",
+    "updatedAt": "2026-11-06T14:02:39.027Z"
+  },
+  {
+    "id": 2074394655,
+    "name": "Obstacle Protection",
+    "description": "-25% obstacle damage",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 84214009686958,
+    "createdAt": "2026-11-06T13:28:33.518Z",
+    "updatedAt": "2026-11-06T14:02:39.962Z"
+  },
+  {
+    "id": 2074622655,
+    "name": "x2 Finish Diamonds",
+    "description": "x2 World finish Diamonds",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 139525439011490,
+    "createdAt": "2026-11-06T13:28:33.036Z",
+    "updatedAt": "2026-11-06T14:02:40.931Z"
+  },
+  {
+    "id": 2075342652,
+    "name": "x1.5 Artifact Money",
+    "description": "x1.5 Money from selling artifacts",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 114609983212889,
+    "createdAt": "2026-11-06T13:28:32.528Z",
+    "updatedAt": "2026-11-06T14:02:41.875Z"
+  },
+  {
+    "id": 2074148637,
+    "name": "Auto Sell",
+    "description": "Sells unlocked items when you return to base (toggle)",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 97760989216763,
+    "createdAt": "2026-11-06T13:28:32.074Z",
+    "updatedAt": "2026-11-06T14:02:42.858Z"
+  },
+  {
+    "id": 2074658664,
+    "name": "Auto Rebirth",
+    "description": "Rebirths automatically when Strength is enough (toggle)",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 128234613789846,
+    "createdAt": "2026-11-06T13:28:31.624Z",
+    "updatedAt": "2026-11-06T14:02:43.831Z"
+  },
+  {
+    "id": 2074280678,
+    "name": "Infinity Backpack",
+    "description": "Unlimited bag space",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 91820077462034,
+    "createdAt": "2026-11-06T13:28:21.131Z",
+    "updatedAt": "2026-11-06T14:02:44.816Z"
+  },
+  {
+    "id": 2053938331,
+    "name": "Gamepass Test",
+    "description": "",
+    "isForSale": true,
+    "price": 199,
+    "iconAssetId": 133448903949274,
+    "createdAt": "2026-10-26T05:11:08.216Z",
+    "updatedAt": "2026-10-26T05:39:03.851Z"
+  }
+]

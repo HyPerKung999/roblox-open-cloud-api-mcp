@@ -1,0 +1,18 @@
+[
+  { "name": "Infinity Backpack", "description": "Unlimited bag space", "price": 999, "isForSale": true },
+  { "name": "Auto Rebirth", "description": "Rebirths automatically when Strength is enough (toggle)", "price": 999, "isForSale": true },
+  { "name": "Auto Sell", "description": "Sells unlocked items when you return to base (toggle)", "price": 999, "isForSale": true },
+  { "name": "x1.5 Artifact Money", "description": "x1.5 Money from selling artifacts", "price": 999, "isForSale": true },
+  { "name": "x2 Finish Diamonds", "description": "x2 World finish Diamonds", "price": 999, "isForSale": true },
+  { "name": "Obstacle Protection", "description": "-25% obstacle damage", "price": 999, "isForSale": true },
+  { "name": "Plunger Range +50%", "description": "+50% shot range and rope length", "price": 999, "isForSale": true },
+  { "name": "Training x25", "description": "Unlocks the x25 training lane", "price": 999, "isForSale": true },
+  { "name": "Training x35", "description": "Unlocks the x35 training lane", "price": 999, "isForSale": true },
+  { "name": "Training x50", "description": "Unlocks the x50 training lane", "price": 999, "isForSale": true },
+  { "name": "Training x100", "description": "Unlocks the x100 training lane", "price": 999, "isForSale": true },
+  { "name": "Training x500", "description": "Unlocks the x500 training lane", "price": 999, "isForSale": true },
+  { "name": "Training x1000", "description": "Unlocks the x1000 training lane", "price": 999, "isForSale": true },
+  { "name": "+1 Aura Slot", "description": "A second slot to keep an Aura in (you still wear one)", "price": 999, "isForSale": true },
+  { "name": "x2 Lucky Spin", "description": "Doubles the odds of every Aura above Common. Aura Spin only, not Artifacts", "price": 999, "isForSale": true },
+  { "name": "Fast Spin", "description": "Shorter Aura Spin animation. The odds stay the same", "price": 999, "isForSale": true }
+]

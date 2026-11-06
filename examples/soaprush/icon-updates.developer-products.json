@@ -1,0 +1,332 @@
+[
+  {
+    "id": 3728864938,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Main\\Rebirth and Auto Open\\256px\\Rebirth 1st Outline 256px.png",
+    "_name": "Skip Rebirth",
+    "_icon": "Rebirth"
+  },
+  {
+    "id": 3728864930,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Player\\Arm\\256px\\Arm 1st Outline 256px.png",
+    "_name": "Strength Gain x64",
+    "_icon": "Arm"
+  },
+  {
+    "id": 3728864926,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Player\\Arm\\256px\\Arm 1st Outline 256px.png",
+    "_name": "Strength Gain x32",
+    "_icon": "Arm"
+  },
+  {
+    "id": 3728864923,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Player\\Arm\\256px\\Arm 1st Outline 256px.png",
+    "_name": "Strength Gain x16",
+    "_icon": "Arm"
+  },
+  {
+    "id": 3728864919,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Player\\Arm\\256px\\Arm 1st Outline 256px.png",
+    "_name": "Strength Gain x8",
+    "_icon": "Arm"
+  },
+  {
+    "id": 3728864916,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Player\\Arm\\256px\\Arm 1st Outline 256px.png",
+    "_name": "Strength Gain x4",
+    "_icon": "Arm"
+  },
+  {
+    "id": 3728864913,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Player\\Arm\\256px\\Arm 1st Outline 256px.png",
+    "_name": "Strength Gain x2",
+    "_icon": "Arm"
+  },
+  {
+    "id": 3728864911,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Currency\\Cash\\256px\\Green Cash 1st Outline 256px.png",
+    "_name": "Money Multiplier x256",
+    "_icon": "Cash"
+  },
+  {
+    "id": 3728864907,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Currency\\Cash\\256px\\Green Cash 1st Outline 256px.png",
+    "_name": "Money Multiplier x128",
+    "_icon": "Cash"
+  },
+  {
+    "id": 3728864903,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Currency\\Cash\\256px\\Green Cash 1st Outline 256px.png",
+    "_name": "Money Multiplier x64",
+    "_icon": "Cash"
+  },
+  {
+    "id": 3728864896,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Currency\\Cash\\256px\\Green Cash 1st Outline 256px.png",
+    "_name": "Money Multiplier x32",
+    "_icon": "Cash"
+  },
+  {
+    "id": 3728864895,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Currency\\Cash\\256px\\Green Cash 1st Outline 256px.png",
+    "_name": "Money Multiplier x16",
+    "_icon": "Cash"
+  },
+  {
+    "id": 3728864890,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Currency\\Cash\\256px\\Green Cash 1st Outline 256px.png",
+    "_name": "Money Multiplier x8",
+    "_icon": "Cash"
+  },
+  {
+    "id": 3728864886,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Currency\\Cash\\256px\\Green Cash 1st Outline 256px.png",
+    "_name": "Money Multiplier x4",
+    "_icon": "Cash"
+  },
+  {
+    "id": 3728864885,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Currency\\Cash\\256px\\Green Cash 1st Outline 256px.png",
+    "_name": "Money Multiplier x2",
+    "_icon": "Cash"
+  },
+  {
+    "id": 3728864880,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Item\\Potion\\256px\\Purple Potion 1st Outline 256px.png",
+    "_name": "Boost Bundle",
+    "_icon": "Potion"
+  },
+  {
+    "id": 3728864874,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Item\\Gift\\256px\\Green Gift 1st Outline 256px.png",
+    "_name": "Starter Pack",
+    "_icon": "Gift"
+  },
+  {
+    "id": 3728864873,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Player\\Arm\\256px\\Arm 1st Outline 256px.png",
+    "_name": "Gift Strength Boost",
+    "_icon": "Arm"
+  },
+  {
+    "id": 3728864871,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Currency\\Cash\\256px\\Green Cash 1st Outline 256px.png",
+    "_name": "Gift Money Boost",
+    "_icon": "Cash"
+  },
+  {
+    "id": 3728864864,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Player\\Arm\\256px\\Arm 1st Outline 256px.png",
+    "_name": "Strength Boost",
+    "_icon": "Arm"
+  },
+  {
+    "id": 3728864858,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Currency\\Cash\\256px\\Green Cash 1st Outline 256px.png",
+    "_name": "Money Boost",
+    "_icon": "Cash"
+  },
+  {
+    "id": 3728864856,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Player\\Arm\\256px\\Arm 1st Outline 256px.png",
+    "_name": "Gift Strength Pack S1M",
+    "_icon": "Arm"
+  },
+  {
+    "id": 3728864852,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Player\\Arm\\256px\\Arm 1st Outline 256px.png",
+    "_name": "Gift Strength Pack S500K",
+    "_icon": "Arm"
+  },
+  {
+    "id": 3728864849,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Player\\Arm\\256px\\Arm 1st Outline 256px.png",
+    "_name": "Gift Strength Pack S100K",
+    "_icon": "Arm"
+  },
+  {
+    "id": 3728864845,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Player\\Arm\\256px\\Arm 1st Outline 256px.png",
+    "_name": "Gift Strength Pack S50K",
+    "_icon": "Arm"
+  },
+  {
+    "id": 3728864842,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Player\\Arm\\256px\\Arm 1st Outline 256px.png",
+    "_name": "Gift Strength Pack S10K",
+    "_icon": "Arm"
+  },
+  {
+    "id": 3728864840,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Player\\Arm\\256px\\Arm 1st Outline 256px.png",
+    "_name": "Strength Pack S1M",
+    "_icon": "Arm"
+  },
+  {
+    "id": 3728864837,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Player\\Arm\\256px\\Arm 1st Outline 256px.png",
+    "_name": "Strength Pack S500K",
+    "_icon": "Arm"
+  },
+  {
+    "id": 3728864833,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Player\\Arm\\256px\\Arm 1st Outline 256px.png",
+    "_name": "Strength Pack S100K",
+    "_icon": "Arm"
+  },
+  {
+    "id": 3728864829,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Player\\Arm\\256px\\Arm 1st Outline 256px.png",
+    "_name": "Strength Pack S50K",
+    "_icon": "Arm"
+  },
+  {
+    "id": 3728864826,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Player\\Arm\\256px\\Arm 1st Outline 256px.png",
+    "_name": "Strength Pack S10K",
+    "_icon": "Arm"
+  },
+  {
+    "id": 3728864822,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Exclusive\\Aura\\256px\\Aura 1st Outline 256px.png",
+    "_name": "Gift 100 Aura Spins",
+    "_icon": "Aura"
+  },
+  {
+    "id": 3728864820,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Exclusive\\Aura\\256px\\Aura 1st Outline 256px.png",
+    "_name": "Gift 50 Aura Spins",
+    "_icon": "Aura"
+  },
+  {
+    "id": 3728864816,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Exclusive\\Aura\\256px\\Aura 1st Outline 256px.png",
+    "_name": "Gift 25 Aura Spins",
+    "_icon": "Aura"
+  },
+  {
+    "id": 3728864814,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Exclusive\\Aura\\256px\\Aura 1st Outline 256px.png",
+    "_name": "Gift 1 Aura Spin",
+    "_icon": "Aura"
+  },
+  {
+    "id": 3728864812,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Exclusive\\Aura\\256px\\Aura 1st Outline 256px.png",
+    "_name": "100 Aura Spins",
+    "_icon": "Aura"
+  },
+  {
+    "id": 3728864808,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Exclusive\\Aura\\256px\\Aura 1st Outline 256px.png",
+    "_name": "50 Aura Spins",
+    "_icon": "Aura"
+  },
+  {
+    "id": 3728864802,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Exclusive\\Aura\\256px\\Aura 1st Outline 256px.png",
+    "_name": "25 Aura Spins",
+    "_icon": "Aura"
+  },
+  {
+    "id": 3728864799,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Exclusive\\Aura\\256px\\Aura 1st Outline 256px.png",
+    "_name": "1 Aura Spin",
+    "_icon": "Aura"
+  },
+  {
+    "id": 3728864796,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Main\\Lighting\\256px\\Lighting 1st Outline 256px.png",
+    "_name": "Gift Fast Spin",
+    "_icon": "Lightning"
+  },
+  {
+    "id": 3728864793,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Nature\\Clover\\256px\\Clover 1st Outline 256px.png",
+    "_name": "Gift x2 Lucky Spin",
+    "_icon": "Clover"
+  },
+  {
+    "id": 3728864789,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Exclusive\\Aura\\256px\\Aura 1st Outline 256px.png",
+    "_name": "Gift +1 Aura Slot",
+    "_icon": "Aura"
+  },
+  {
+    "id": 3728864782,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Player\\Arm\\256px\\Arm 1st Outline 256px.png",
+    "_name": "Gift Training x1000",
+    "_icon": "Arm"
+  },
+  {
+    "id": 3728864778,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Player\\Arm\\256px\\Arm 1st Outline 256px.png",
+    "_name": "Gift Training x500",
+    "_icon": "Arm"
+  },
+  {
+    "id": 3728864775,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Player\\Arm\\256px\\Arm 1st Outline 256px.png",
+    "_name": "Gift Training x100",
+    "_icon": "Arm"
+  },
+  {
+    "id": 3728864774,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Player\\Arm\\256px\\Arm 1st Outline 256px.png",
+    "_name": "Gift Training x50",
+    "_icon": "Arm"
+  },
+  {
+    "id": 3728864772,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Player\\Arm\\256px\\Arm 1st Outline 256px.png",
+    "_name": "Gift Training x35",
+    "_icon": "Arm"
+  },
+  {
+    "id": 3728864769,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Player\\Arm\\256px\\Arm 1st Outline 256px.png",
+    "_name": "Gift Training x25",
+    "_icon": "Arm"
+  },
+  {
+    "id": 3728864763,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Item\\Target\\256px\\Target 1st Outline 256px.png",
+    "_name": "Gift Plunger Range +50%",
+    "_icon": "Target"
+  },
+  {
+    "id": 3728864760,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Item\\Shield\\256px\\Shield 1st Outline 256px.png",
+    "_name": "Gift Obstacle Protection",
+    "_icon": "Shield"
+  },
+  {
+    "id": 3728864754,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Item\\Medal\\256px\\Bronze Medal 1st Outline 256px.png",
+    "_name": "Gift x2 Finish Diamonds",
+    "_icon": "Medal"
+  },
+  {
+    "id": 3728864752,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Currency\\Cash\\256px\\Green Cash 1st Outline 256px.png",
+    "_name": "Gift x1.5 Artifact Money",
+    "_icon": "Cash"
+  },
+  {
+    "id": 3728864747,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Currency\\Cash\\256px\\Green Cash 1st Outline 256px.png",
+    "_name": "Gift Auto Sell",
+    "_icon": "Cash"
+  },
+  {
+    "id": 3728864745,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Main\\Rebirth and Auto Open\\256px\\Rebirth 1st Outline 256px.png",
+    "_name": "Gift Auto Rebirth",
+    "_icon": "Rebirth"
+  },
+  {
+    "id": 3728864742,
+    "iconPath": "G:\\My Drive\\BUSINESS\\Zevio Studios\\Soap Rush\\Image\\Icon\\Free Icon Pack v3.1 (Basic)\\Item\\Backpack\\256px\\Backpack 1st Outline 256px.png",
+    "_name": "Gift Infinity Backpack",
+    "_icon": "Backpack"
+  }
+]

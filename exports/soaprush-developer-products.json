@@ -1,0 +1,562 @@
+[
+  {
+    "id": 3728864938,
+    "name": "Skip Rebirth",
+    "description": "",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 118103832212618,
+    "createdAt": "2026-11-06T13:29:19.223Z",
+    "updatedAt": "2026-11-06T14:02:47.989Z"
+  },
+  {
+    "id": 3728864930,
+    "name": "Strength Gain x64",
+    "description": "",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 124001509929739,
+    "createdAt": "2026-11-06T13:29:18.732Z",
+    "updatedAt": "2026-11-06T14:02:50.497Z"
+  },
+  {
+    "id": 3728864926,
+    "name": "Strength Gain x32",
+    "description": "",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 87110392842931,
+    "createdAt": "2026-11-06T13:29:18.254Z",
+    "updatedAt": "2026-11-06T14:02:52.042Z"
+  },
+  {
+    "id": 3728864923,
+    "name": "Strength Gain x16",
+    "description": "",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 133422001498557,
+    "createdAt": "2026-11-06T13:29:17.741Z",
+    "updatedAt": "2026-11-06T14:02:53.485Z"
+  },
+  {
+    "id": 3728864919,
+    "name": "Strength Gain x8",
+    "description": "",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 110471289649851,
+    "createdAt": "2026-11-06T13:29:17.248Z",
+    "updatedAt": "2026-11-06T14:02:55.915Z"
+  },
+  {
+    "id": 3728864916,
+    "name": "Strength Gain x4",
+    "description": "",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 126074126352206,
+    "createdAt": "2026-11-06T13:29:16.706Z",
+    "updatedAt": "2026-11-06T14:02:57.392Z"
+  },
+  {
+    "id": 3728864913,
+    "name": "Strength Gain x2",
+    "description": "",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 120996304313468,
+    "createdAt": "2026-11-06T13:29:16.22Z",
+    "updatedAt": "2026-11-06T14:02:59.849Z"
+  },
+  {
+    "id": 3728864911,
+    "name": "Money Multiplier x256",
+    "description": "",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 91711862991784,
+    "createdAt": "2026-11-06T13:29:15.666Z",
+    "updatedAt": "2026-11-06T14:03:02.288Z"
+  },
+  {
+    "id": 3728864907,
+    "name": "Money Multiplier x128",
+    "description": "",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 114836683943071,
+    "createdAt": "2026-11-06T13:29:15.126Z",
+    "updatedAt": "2026-11-06T14:03:03.908Z"
+  },
+  {
+    "id": 3728864903,
+    "name": "Money Multiplier x64",
+    "description": "",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 130608436959892,
+    "createdAt": "2026-11-06T13:29:14.632Z",
+    "updatedAt": "2026-11-06T14:03:06.528Z"
+  },
+  {
+    "id": 3728864896,
+    "name": "Money Multiplier x32",
+    "description": "",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 129236842827760,
+    "createdAt": "2026-11-06T13:29:14.085Z",
+    "updatedAt": "2026-11-06T14:03:09.106Z"
+  },
+  {
+    "id": 3728864895,
+    "name": "Money Multiplier x16",
+    "description": "",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 133511682839358,
+    "createdAt": "2026-11-06T13:29:13.587Z",
+    "updatedAt": "2026-11-06T14:03:10.607Z"
+  },
+  {
+    "id": 3728864890,
+    "name": "Money Multiplier x8",
+    "description": "",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 108353973836071,
+    "createdAt": "2026-11-06T13:29:13.085Z",
+    "updatedAt": "2026-11-06T14:03:12.032Z"
+  },
+  {
+    "id": 3728864886,
+    "name": "Money Multiplier x4",
+    "description": "",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 135625471643527,
+    "createdAt": "2026-11-06T13:29:12.562Z",
+    "updatedAt": "2026-11-06T14:03:14.494Z"
+  },
+  {
+    "id": 3728864885,
+    "name": "Money Multiplier x2",
+    "description": "",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 81591117150637,
+    "createdAt": "2026-11-06T13:29:12.033Z",
+    "updatedAt": "2026-11-06T14:03:17.021Z"
+  },
+  {
+    "id": 3728864880,
+    "name": "Boost Bundle",
+    "description": "One per player",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 119900713584030,
+    "createdAt": "2026-11-06T13:29:11.542Z",
+    "updatedAt": "2026-11-06T14:03:18.469Z"
+  },
+  {
+    "id": 3728864874,
+    "name": "Starter Pack",
+    "description": "One per player",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 91289879156678,
+    "createdAt": "2026-11-06T13:29:10.919Z",
+    "updatedAt": "2026-11-06T14:03:20.916Z"
+  },
+  {
+    "id": 3728864873,
+    "name": "Gift Strength Boost",
+    "description": "",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 88367308336721,
+    "createdAt": "2026-11-06T13:29:10.405Z",
+    "updatedAt": "2026-11-06T14:03:23.465Z"
+  },
+  {
+    "id": 3728864871,
+    "name": "Gift Money Boost",
+    "description": "",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 104577786218677,
+    "createdAt": "2026-11-06T13:29:09.821Z",
+    "updatedAt": "2026-11-06T14:03:26.027Z"
+  },
+  {
+    "id": 3728864864,
+    "name": "Strength Boost",
+    "description": "",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 99617439338978,
+    "createdAt": "2026-11-06T13:29:09.264Z",
+    "updatedAt": "2026-11-06T14:03:27.521Z"
+  },
+  {
+    "id": 3728864858,
+    "name": "Money Boost",
+    "description": "",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 110090125025182,
+    "createdAt": "2026-11-06T13:29:08.442Z",
+    "updatedAt": "2026-11-06T14:03:29.078Z"
+  },
+  {
+    "id": 3728864856,
+    "name": "Gift Strength Pack S1M",
+    "description": "",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 125570947223180,
+    "createdAt": "2026-11-06T13:29:07.658Z",
+    "updatedAt": "2026-11-06T14:03:30.556Z"
+  },
+  {
+    "id": 3728864852,
+    "name": "Gift Strength Pack S500K",
+    "description": "",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 78875302845027,
+    "createdAt": "2026-11-06T13:29:07.054Z",
+    "updatedAt": "2026-11-06T14:03:33.1Z"
+  },
+  {
+    "id": 3728864849,
+    "name": "Gift Strength Pack S100K",
+    "description": "",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 126565828361741,
+    "createdAt": "2026-11-06T13:29:06.571Z",
+    "updatedAt": "2026-11-06T14:03:34.7Z"
+  },
+  {
+    "id": 3728864845,
+    "name": "Gift Strength Pack S50K",
+    "description": "",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 100497677563632,
+    "createdAt": "2026-11-06T13:29:06.047Z",
+    "updatedAt": "2026-11-06T14:03:36.213Z"
+  },
+  {
+    "id": 3728864842,
+    "name": "Gift Strength Pack S10K",
+    "description": "",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 115671070920722,
+    "createdAt": "2026-11-06T13:29:05.544Z",
+    "updatedAt": "2026-11-06T14:03:37.726Z"
+  },
+  {
+    "id": 3728864840,
+    "name": "Strength Pack S1M",
+    "description": "960 minutes of Strength",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 117772444433116,
+    "createdAt": "2026-11-06T13:29:04.987Z",
+    "updatedAt": "2026-11-06T14:03:40.175Z"
+  },
+  {
+    "id": 3728864837,
+    "name": "Strength Pack S500K",
+    "description": "480 minutes of Strength",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 102590849051971,
+    "createdAt": "2026-11-06T13:29:04.414Z",
+    "updatedAt": "2026-11-06T14:03:42.689Z"
+  },
+  {
+    "id": 3728864833,
+    "name": "Strength Pack S100K",
+    "description": "120 minutes of Strength",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 87406580890880,
+    "createdAt": "2026-11-06T13:29:03.893Z",
+    "updatedAt": "2026-11-06T14:03:45.165Z"
+  },
+  {
+    "id": 3728864829,
+    "name": "Strength Pack S50K",
+    "description": "60 minutes of Strength",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 71813587396819,
+    "createdAt": "2026-11-06T13:29:03.387Z",
+    "updatedAt": "2026-11-06T14:03:46.681Z"
+  },
+  {
+    "id": 3728864826,
+    "name": "Strength Pack S10K",
+    "description": "10 minutes of Strength",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 98589204487163,
+    "createdAt": "2026-11-06T13:29:02.855Z",
+    "updatedAt": "2026-11-06T14:03:48.283Z"
+  },
+  {
+    "id": 3728864822,
+    "name": "Gift 100 Aura Spins",
+    "description": "",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 83833092512183,
+    "createdAt": "2026-11-06T13:29:02.345Z",
+    "updatedAt": "2026-11-06T14:03:50.765Z"
+  },
+  {
+    "id": 3728864820,
+    "name": "Gift 50 Aura Spins",
+    "description": "",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 121633873165872,
+    "createdAt": "2026-11-06T13:29:01.748Z",
+    "updatedAt": "2026-11-06T14:03:52.244Z"
+  },
+  {
+    "id": 3728864816,
+    "name": "Gift 25 Aura Spins",
+    "description": "",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 85539143905669,
+    "createdAt": "2026-11-06T13:29:01.202Z",
+    "updatedAt": "2026-11-06T14:03:54.776Z"
+  },
+  {
+    "id": 3728864814,
+    "name": "Gift 1 Aura Spin",
+    "description": "",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 89680345473470,
+    "createdAt": "2026-11-06T13:29:00.659Z",
+    "updatedAt": "2026-11-06T14:03:56.437Z"
+  },
+  {
+    "id": 3728864812,
+    "name": "100 Aura Spins",
+    "description": "",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 131648904453856,
+    "createdAt": "2026-11-06T13:29:00.162Z",
+    "updatedAt": "2026-11-06T14:03:58.923Z"
+  },
+  {
+    "id": 3728864808,
+    "name": "50 Aura Spins",
+    "description": "",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 124229533501340,
+    "createdAt": "2026-11-06T13:28:59.625Z",
+    "updatedAt": "2026-11-06T14:04:01.508Z"
+  },
+  {
+    "id": 3728864802,
+    "name": "25 Aura Spins",
+    "description": "",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 94528634570615,
+    "createdAt": "2026-11-06T13:28:59.053Z",
+    "updatedAt": "2026-11-06T14:04:03.963Z"
+  },
+  {
+    "id": 3728864799,
+    "name": "1 Aura Spin",
+    "description": "",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 73189970430394,
+    "createdAt": "2026-11-06T13:28:58.511Z",
+    "updatedAt": "2026-11-06T14:04:06.424Z"
+  },
+  {
+    "id": 3728864796,
+    "name": "Gift Fast Spin",
+    "description": "Gift: Fast Spin",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 139466775570653,
+    "createdAt": "2026-11-06T13:28:58.019Z",
+    "updatedAt": "2026-11-06T14:04:07.869Z"
+  },
+  {
+    "id": 3728864793,
+    "name": "Gift x2 Lucky Spin",
+    "description": "Gift: x2 Lucky Spin",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 130042049360727,
+    "createdAt": "2026-11-06T13:28:57.52Z",
+    "updatedAt": "2026-11-06T14:04:10.336Z"
+  },
+  {
+    "id": 3728864789,
+    "name": "Gift +1 Aura Slot",
+    "description": "Gift: +1 Aura Slot",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 128286367844930,
+    "createdAt": "2026-11-06T13:28:56.902Z",
+    "updatedAt": "2026-11-06T14:04:11.816Z"
+  },
+  {
+    "id": 3728864782,
+    "name": "Gift Training x1000",
+    "description": "Gift: x1000 training lane",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 125848275898701,
+    "createdAt": "2026-11-06T13:28:56.349Z",
+    "updatedAt": "2026-11-06T14:04:13.362Z"
+  },
+  {
+    "id": 3728864778,
+    "name": "Gift Training x500",
+    "description": "Gift: x500 training lane",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 104458579722778,
+    "createdAt": "2026-11-06T13:28:55.773Z",
+    "updatedAt": "2026-11-06T14:04:15.817Z"
+  },
+  {
+    "id": 3728864775,
+    "name": "Gift Training x100",
+    "description": "Gift: x100 training lane",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 104074459443077,
+    "createdAt": "2026-11-06T13:28:55.219Z",
+    "updatedAt": "2026-11-06T14:04:18.42Z"
+  },
+  {
+    "id": 3728864774,
+    "name": "Gift Training x50",
+    "description": "Gift: x50 training lane",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 83351871466648,
+    "createdAt": "2026-11-06T13:28:54.71Z",
+    "updatedAt": "2026-11-06T14:04:20.014Z"
+  },
+  {
+    "id": 3728864772,
+    "name": "Gift Training x35",
+    "description": "Gift: x35 training lane",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 71634311269215,
+    "createdAt": "2026-11-06T13:28:53.977Z",
+    "updatedAt": "2026-11-06T14:04:22.466Z"
+  },
+  {
+    "id": 3728864769,
+    "name": "Gift Training x25",
+    "description": "Gift: x25 training lane",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 140143392739584,
+    "createdAt": "2026-11-06T13:28:53.412Z",
+    "updatedAt": "2026-11-06T14:04:24.95Z"
+  },
+  {
+    "id": 3728864763,
+    "name": "Gift Plunger Range +50%",
+    "description": "Gift: +50% shot range and rope length",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 125920515699185,
+    "createdAt": "2026-11-06T13:28:52.769Z",
+    "updatedAt": "2026-11-06T14:04:26.456Z"
+  },
+  {
+    "id": 3728864760,
+    "name": "Gift Obstacle Protection",
+    "description": "Gift: -25% obstacle damage",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 75592139904980,
+    "createdAt": "2026-11-06T13:28:52.279Z",
+    "updatedAt": "2026-11-06T14:04:29.009Z"
+  },
+  {
+    "id": 3728864754,
+    "name": "Gift x2 Finish Diamonds",
+    "description": "Gift: x2 World finish Diamonds",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 113151806772765,
+    "createdAt": "2026-11-06T13:28:51.759Z",
+    "updatedAt": "2026-11-06T14:04:31.503Z"
+  },
+  {
+    "id": 3728864752,
+    "name": "Gift x1.5 Artifact Money",
+    "description": "Gift: x1.5 Money from selling artifacts",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 70863529246397,
+    "createdAt": "2026-11-06T13:28:51.262Z",
+    "updatedAt": "2026-11-06T14:04:33.972Z"
+  },
+  {
+    "id": 3728864747,
+    "name": "Gift Auto Sell",
+    "description": "Gift: Auto Sell",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 138859379231765,
+    "createdAt": "2026-11-06T13:28:50.67Z",
+    "updatedAt": "2026-11-06T14:04:36.565Z"
+  },
+  {
+    "id": 3728864745,
+    "name": "Gift Auto Rebirth",
+    "description": "Gift: Auto Rebirth",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 91672555667505,
+    "createdAt": "2026-11-06T13:28:50.178Z",
+    "updatedAt": "2026-11-06T14:04:38.082Z"
+  },
+  {
+    "id": 3728864742,
+    "name": "Gift Infinity Backpack",
+    "description": "Gift: Unlimited bag space",
+    "isForSale": true,
+    "price": 999,
+    "iconAssetId": 121544275935568,
+    "createdAt": "2026-11-06T13:28:49.692Z",
+    "updatedAt": "2026-11-06T14:04:40.597Z"
+  },
+  {
+    "id": 3722439047,
+    "name": "Developer Product Test",
+    "description": "",
+    "isForSale": true,
+    "price": 199,
+    "iconAssetId": 88963008124478,
+    "createdAt": "2026-10-26T05:38:58.158Z",
+    "updatedAt": "2026-10-26T05:38:58.158Z"
+  }
+]

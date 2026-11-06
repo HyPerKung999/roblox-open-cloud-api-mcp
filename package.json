@@ -1,0 +1,29 @@
+{
+  "name": "roblox-studio-connect",
+  "version": "0.1.0",
+  "description": "Roblox Open Cloud manager (Game Passes, Developer Products, more later) as a JS module, a CLI and an MCP server.",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./mcp": "./src/mcp/server.js"
+  },
+  "bin": {
+    "rsc": "./bin/rsc.js",
+    "rsc-mcp": "./bin/rsc-mcp.js"
+  },
+  "scripts": {
+    "mcp": "node ./bin/rsc-mcp.js",
+    "cli": "node ./bin/rsc.js",
+    "test": "node --test \"test/**/*.test.js\""
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.6.7"
+  },
+  "license": "UNLICENSED",
+  "private": true
+}
