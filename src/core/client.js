@@ -85,14 +85,25 @@ export class OpenCloudClient {
   }
 }
 
+function sniffImage(buf) {
+  if (buf.length > 8 && buf[0] === 0x89 && buf[1] === 0x50 && buf[2] === 0x4e && buf[3] === 0x47) return { type: 'image/png', ext: '.png' };
+  if (buf.length > 3 && buf[0] === 0xff && buf[1] === 0xd8 && buf[2] === 0xff) return { type: 'image/jpeg', ext: '.jpg' };
+  if (buf.length > 2 && buf[0] === 0x42 && buf[1] === 0x4d) return { type: 'image/bmp', ext: '.bmp' };
+  return null;
+}
+
 async function buildForm(fields) {
   const fd = new FormData();
   for (const [k, v] of Object.entries(fields)) {
     if (v === undefined || v === null) continue;
     if (typeof v === 'object' && v.filePath) {
       const buf = await readFile(v.filePath);
-      const type = IMAGE_TYPES[extname(v.filePath).toLowerCase()] || 'application/octet-stream';
-      fd.append(k, new Blob([buf], { type }), basename(v.filePath));
+      // the file's own bytes decide the type (a PNG saved as ".jpg" must still go up as image/png)
+      const sniffed = sniffImage(buf);
+      const type = sniffed?.type || IMAGE_TYPES[extname(v.filePath).toLowerCase()] || 'application/octet-stream';
+      let name = basename(v.filePath);
+      if (sniffed && IMAGE_TYPES[extname(name).toLowerCase()] !== sniffed.type) name = name.slice(0, name.length - extname(name).length) + sniffed.ext;
+      fd.append(k, new Blob([buf], { type }), name);
     } else {
       fd.append(k, String(v));
     }

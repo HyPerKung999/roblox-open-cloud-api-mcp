@@ -1,0 +1,12 @@
+[
+  { "id": 3729122907, "name": "Diamond Pack D100", "description": "+100 Diamonds" },
+  { "id": 3729122909, "name": "Diamond Pack D500", "description": "+500 Diamonds" },
+  { "id": 3729122914, "name": "Diamond Pack D1000", "description": "+1,000 Diamonds" },
+  { "id": 3729122916, "name": "Diamond Pack D2500", "description": "+2,500 Diamonds" },
+  { "id": 3729122918, "name": "Diamond Pack D5000", "description": "+5,000 Diamonds" },
+  { "id": 3729122919, "name": "Gift Diamond Pack D100", "description": "Gift: +100 Diamonds" },
+  { "id": 3729122920, "name": "Gift Diamond Pack D500", "description": "Gift: +500 Diamonds" },
+  { "id": 3729122923, "name": "Gift Diamond Pack D1000", "description": "Gift: +1,000 Diamonds" },
+  { "id": 3729122926, "name": "Gift Diamond Pack D2500", "description": "Gift: +2,500 Diamonds" },
+  { "id": 3729122928, "name": "Gift Diamond Pack D5000", "description": "Gift: +5,000 Diamonds" }
+]

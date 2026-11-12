@@ -2,7 +2,7 @@
 // to "Free Icon Pack v3.1 (Basic)" 1st Outline 256px files. Writes icon-updates.<kind>.json.
 import fs from 'node:fs'; import path from 'node:path'; import { fileURLToPath } from 'node:url';
 const here = path.dirname(fileURLToPath(import.meta.url)); const root = path.resolve(here, '../..');
-const PACK = process.env.SOAPRUSH_ICON_PACK || 'G:/My Drive/BUSINESS/Zevio Studios/Soap Rush/Image/Icon/Free Icon Pack v3.1 (Basic)';
+const PACK = process.env.SOAPRUSH_ICON_PACK || 'G:/My Drive/BUSINESS/Zevio Studios/Soap Rush/Image/Kit/Free Icon Pack v3.1 (Basic)';
 const FILE = {
   Cash: 'Currency/Cash/256px/Green Cash 1st Outline 256px.png', Arm: 'Player/Arm/256px/Arm 1st Outline 256px.png',
   Target: 'Item/Target/256px/Target 1st Outline 256px.png', Lightning: 'Main/Lighting/256px/Lighting 1st Outline 256px.png',
