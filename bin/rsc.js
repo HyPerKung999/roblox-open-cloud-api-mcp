@@ -17,8 +17,16 @@ Usage:
   rsc <resource> bulk-update <items.json>
   rsc <resource> export [--csv]
 
-Resources: game-passes, developer-products
+  rsc permissions [--universe <id>] [--group <id>] [--json]   ตรวจว่า API Key ขาดสิทธิ์อะไร (exit 1 ถ้าขาด)
+
+  rsc assets upload-model <file.fbx|.gltf|.glb|.rbxm|.rbxmx> [--name <n>] [--description <d>] [--group <id> | --user <id>]
+  rsc assets upload-animation <file.rbxmx|.rbxm> [--name <n>] [--description <d>] [--group <id> | --user <id>]
+  rsc assets get <assetId>
+  rsc assets operation <operationId>
+
+Resources: game-passes, developer-products, assets
 Global:   --universe <id>  (default ROBLOX_UNIVERSE_ID)
+Creator:  --group <id> (default ROBLOX_GROUP_ID) or --user <id> (default ROBLOX_USER_ID) for asset uploads
 Key:      ROBLOX_API_KEY in the environment or in .env (never pass it on the command line)
 `;
 
@@ -26,6 +34,8 @@ const { values: o, positionals: pos } = parseArgs({
   allowPositionals: true,
   options: {
     universe: { type: 'string' },
+    group: { type: 'string' },
+    user: { type: 'string' },
     name: { type: 'string' },
     description: { type: 'string' },
     price: { type: 'string' },
@@ -68,6 +78,12 @@ async function main() {
   if (resName === 'resources') {
     return print(Object.values(rc.resources).map(({ definition: d }) => `${d.cliName.padEnd(20)} ${d.title} - ${d.description}`).join('\n'));
   }
+  if (resName === 'permissions') {
+    const r = await rc.checkPermissions({ groupId: o.group });
+    print(o.json ? { ok: r.ok, method: r.method, key: r.key, missing: r.missing, unknown: r.unknown, warnings: r.warnings, features: r.features } : r.text);
+    if (!r.ok) process.exitCode = 1;
+    return;
+  }
   const res = Object.values(rc.resources).find((r) => r.definition.cliName === resName);
   if (!res) throw new Error(`Unknown resource "${resName}". Try: rsc resources`);
 
@@ -93,6 +109,15 @@ async function main() {
       const r = await res.bulkUpdate({ items, onProgress: progress });
       return print({ updated: r.updated, failed: r.failed, items: r.results.map((x) => ({ id: x.input.id, ok: x.ok, error: x.error })) });
     }
+    case 'upload-model':
+    case 'upload-animation': {
+      if (!res.uploadModel) throw new Error(`"${cmd}" ใช้ได้กับ assets เท่านั้น`);
+      if (!arg) throw new Error(`ระบุไฟล์: rsc assets ${cmd} <file>`);
+      const args = { filePath: arg, displayName: o.name, description: o.description, groupId: o.group, userId: o.user };
+      console.error(`กำลังอัปโหลด ${arg} ...`);
+      return print(await (cmd === 'upload-model' ? res.uploadModel(args) : res.uploadAnimation(args)));
+    }
+    case 'operation': return print(await res.operation({ id: arg }));
     case 'export': {
       const items = await res.list();
       if (o.csv) {

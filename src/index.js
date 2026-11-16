@@ -2,8 +2,10 @@ import { OpenCloudClient } from './core/client.js';
 import { bindResource } from './core/resource.js';
 import { builtinResources } from './resources/index.js';
 import { loadEnv, resolveConfig } from './config.js';
+import { checkPermissions } from './core/permissions.js';
 
 export { OpenCloudClient } from './core/client.js';
+export { checkPermissions, FEATURES as PERMISSION_FEATURES, permissionHint } from './core/permissions.js';
 export { RobloxApiError, ConfigError } from './core/errors.js';
 export { defineResource } from './core/resource.js';
 export { defineMonetizedResource } from './resources/_monetized.js';
@@ -23,7 +25,7 @@ export { builtinResources } from './resources/index.js';
 export function createRobloxConnect(options = {}) {
   if (options.loadDotEnv !== false) loadEnv();
   const cfg = resolveConfig(options);
-  const client = new OpenCloudClient({ apiKey: cfg.apiKey, baseUrl: cfg.baseUrl, fetchImpl: options.fetchImpl, logger: options.logger });
+  const client = new OpenCloudClient({ apiKey: cfg.apiKey, baseUrl: cfg.baseUrl, fetchImpl: options.fetchImpl, logger: options.logger, allowMissingKey: options.allowMissingKey });
 
   const defs = [...builtinResources, ...(options.resources || [])];
   const api = { client, universeId: cfg.universeId, resources: {} };
@@ -34,6 +36,16 @@ export function createRobloxConnect(options = {}) {
     api.resources[def.key] = bound;
     api[def.key] = bound;
   }
+
+  /**
+   * ตรวจว่า API Key มีสิทธิ์ครบไหม (ใช้ universe จาก .env และ ROBLOX_GROUP_ID เป็นค่าเริ่มต้น)
+   * คืน { ok, missing, features, warnings, text } — text เป็นสรุปภาษาไทยพร้อมวิธีไปกดอนุญาต
+   */
+  api.checkPermissions = (opts = {}) => checkPermissions(client, {
+    universeId: opts.universeId ?? cfg.universeId,
+    groupId: opts.groupId ?? process.env.ROBLOX_GROUP_ID,
+    features: opts.features,
+  });
 
   /** Same toolkit pointed at another experience. */
   api.forUniverse = (universeId) => createRobloxConnect({ ...options, ...cfg, universeId, loadDotEnv: false });

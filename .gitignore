@@ -1,3 +1,6 @@
 node_modules/
 .env
 *.log
+
+# keep the shareable template in git / เก็บไฟล์ template ไว้ใน git
+!.env.template

@@ -1,8 +1,10 @@
 import { readFile } from 'node:fs/promises';
 import { basename, extname } from 'node:path';
 import { RobloxApiError, ConfigError } from './errors.js';
+import { permissionHint } from './permissions.js';
 
 const DEFAULT_BASE_URL = 'https://apis.roblox.com';
+const MISSING_KEY = 'Missing API key: ตั้ง ROBLOX_API_KEY ในไฟล์ .env ของโปรเจกต์นี้ (หรือ environment) — Missing API key (set ROBLOX_API_KEY or pass { apiKey }).';
 const IMAGE_TYPES = { '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.bmp': 'image/bmp', '.tga': 'image/x-tga' };
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -14,9 +16,10 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
  * - Optional per-bucket throttle so bulk jobs stay under Roblox rate limits.
  */
 export class OpenCloudClient {
-  constructor({ apiKey, baseUrl = DEFAULT_BASE_URL, maxRetries = 4, fetchImpl = globalThis.fetch, logger = null } = {}) {
-    if (!apiKey) throw new ConfigError('Missing API key (set ROBLOX_API_KEY or pass { apiKey }).');
-    this.#apiKey = apiKey;
+  constructor({ apiKey, baseUrl = DEFAULT_BASE_URL, maxRetries = 4, fetchImpl = globalThis.fetch, logger = null, allowMissingKey = false } = {}) {
+    // allowMissingKey: ให้ MCP server เปิดได้แม้ยังไม่ตั้งคีย์ (tool ยังขึ้น และบอกผู้ใช้ว่าต้องตั้งค่าอะไร) — เรียก API จริงจะ error ชัดเจน
+    if (!apiKey && !allowMissingKey) throw new ConfigError(MISSING_KEY);
+    this.#apiKey = apiKey || null;
     this.baseUrl = baseUrl.replace(/\/$/, '');
     this.maxRetries = maxRetries;
     this.fetch = fetchImpl;
@@ -49,7 +52,11 @@ export class OpenCloudClient {
    * @param {object} [opts.form]   multipart fields; a value of { filePath } is uploaded as a file
    * @param {string} [opts.bucket] rate-limit bucket name
    */
+  /** true ถ้าตั้งคีย์แล้ว */
+  get hasApiKey() { return !!this.#apiKey; }
+
   async request(method, path, { query, json, form, bucket } = {}) {
+    if (!this.#apiKey) throw new ConfigError(MISSING_KEY);
     const url = new URL(this.baseUrl + path);
     for (const [k, v] of Object.entries(query || {})) {
       if (v !== undefined && v !== null && v !== '') url.searchParams.set(k, String(v));
@@ -80,8 +87,17 @@ export class OpenCloudClient {
         await sleep(delay);
         continue;
       }
-      throw new RobloxApiError({ status: res.status, method, path, body: data });
+      const hint = res.status === 401 || res.status === 403 ? permissionHint(method, path, res.status) : null;
+      throw new RobloxApiError({ status: res.status, method, path, body: data, hint });
     }
+  }
+
+  /**
+   * ถาม Roblox ว่าคีย์นี้มีสิทธิ์อะไร (POST /api-keys/v1/introspect)
+   * คีย์ถูกส่งใน body ไปที่ Roblox เท่านั้น ไม่ถูกคืนหรือ log
+   */
+  async introspect() {
+    return this.request('POST', '/api-keys/v1/introspect', { json: { apiKey: this.#apiKey } });
   }
 }
 
@@ -100,7 +116,8 @@ async function buildForm(fields) {
       const buf = await readFile(v.filePath);
       // the file's own bytes decide the type (a PNG saved as ".jpg" must still go up as image/png)
       const sniffed = sniffImage(buf);
-      const type = sniffed?.type || IMAGE_TYPES[extname(v.filePath).toLowerCase()] || 'application/octet-stream';
+      // v.contentType: ใช้กับไฟล์ที่ไม่ใช่รูป (เช่น model/fbx สำหรับ Assets API) — รูปยังเดาจาก byte เหมือนเดิม
+      const type = v.contentType || sniffed?.type || IMAGE_TYPES[extname(v.filePath).toLowerCase()] || 'application/octet-stream';
       let name = basename(v.filePath);
       if (sniffed && IMAGE_TYPES[extname(name).toLowerCase()] !== sniffed.type) name = name.slice(0, name.length - extname(name).length) + sniffed.ext;
       fd.append(k, new Blob([buf], { type }), name);

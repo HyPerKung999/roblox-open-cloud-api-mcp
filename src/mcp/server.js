@@ -38,11 +38,60 @@ const fail = (err) => ({ isError: true, content: [{ type: 'text', text: String(e
  * _bulk_create, _bulk_update (e.g. game_passes_create).
  */
 export function createMcpServer(options = {}) {
-  const rc = createRobloxConnect(options);
-  const server = new McpServer({ name: 'roblox-studio-connect', version: '0.1.0' });
+  // allowMissingKey: เปิด server ได้แม้ยังไม่ตั้งคีย์ → tool ยังขึ้นให้ Claude เห็น และ roblox_check_permissions บอกว่าต้องตั้ง ROBLOX_API_KEY
+  const rc = createRobloxConnect({ allowMissingKey: true, ...options });
+  const server = new McpServer({ name: 'roblox-studio-connect', version: '0.2.0' }, {
+    instructions: [
+      'Roblox Open Cloud: Game Passes, Developer Products, and asset uploads (3D models, Animations).',
+      'Call roblox_check_permissions before the first write in a session and whenever a tool fails with 401/403.',
+      'If it reports missing permissions, tell the user exactly which scopes are missing (the "missing" list and the Thai text) and that they must add them to the API key at https://create.roblox.com/dashboard/credentials — never ask for or handle the API key yourself.',
+      'Asset uploads are permanent and go through moderation: confirm with the user what will be uploaded and under which creator (group/user) before calling assets_upload_*.',
+    ].join(' '),
+  });
 
   const pick = (universeId) => (universeId ? rc.forUniverse(universeId) : rc);
   const run = (fn) => async (args) => { try { return ok(await fn(args)); } catch (e) { return fail(e); } };
+
+  server.registerTool('roblox_check_permissions', {
+    title: 'Check API key permissions',
+    description: 'Checks which Open Cloud scopes the configured API key has (game-pass, developer-product, asset read/write), whether it is bound to the experience/group, and lists what is missing with Thai instructions for the user. Run before writing, and after any 401/403.',
+    inputSchema: {
+      ...universeArg,
+      groupId: z.union([z.string(), z.number()]).optional().describe('Group that owns uploads. Defaults to ROBLOX_GROUP_ID.'),
+    },
+    annotations: { readOnlyHint: true },
+  }, run(async ({ universeId, groupId }) => {
+    const r = await rc.checkPermissions({ universeId, groupId: groupId != null ? String(groupId) : undefined });
+    return { ok: r.ok, keyValid: r.keyValid, method: r.method, key: r.key, missing: r.missing.map((m) => ({ scope: m.scope, purpose: m.purpose, note: m.note })), unknown: r.unknown.map((u) => u.scope), warnings: r.warnings, reportForUser: r.text };
+  }));
+
+  const uploadShape = {
+    filePath: z.string().describe('Absolute path of the local file to upload.'),
+    displayName: z.string().optional().describe('Asset name (default: file name).'),
+    description: z.string().optional(),
+    groupId: z.union([z.string(), z.number()]).optional().describe('Upload as this group (API key must be created in that group). Defaults to ROBLOX_GROUP_ID.'),
+    userId: z.union([z.string(), z.number()]).optional().describe('Upload as this user instead of a group.'),
+  };
+  const norm = (a) => ({ ...a, groupId: a.groupId != null ? String(a.groupId) : undefined, userId: a.userId != null ? String(a.userId) : undefined });
+
+  server.registerTool('assets_upload_model', {
+    title: 'Upload 3D model',
+    description: 'Upload a .fbx/.gltf/.glb/.rbxm/.rbxmx file as a Model asset and wait for the asset id (needs asset:write + asset:read). Permanent; goes through moderation.',
+    inputSchema: uploadShape,
+  }, run(async (a) => rc.assets.uploadModel(norm(a))));
+
+  server.registerTool('assets_upload_animation', {
+    title: 'Upload Animation',
+    description: 'Upload a KeyframeSequence file (.rbxmx/.rbxm) as an Animation asset and wait for the asset id (needs asset:write + asset:read). FBX animations cannot be uploaded directly. Permanent; goes through moderation.',
+    inputSchema: uploadShape,
+  }, run(async (a) => rc.assets.uploadAnimation(norm(a))));
+
+  server.registerTool('assets_operation', {
+    title: 'Check asset upload operation',
+    description: 'Poll an asset upload operation by id (use when an upload timed out).',
+    inputSchema: { id: z.string().describe('Operation id') },
+    annotations: { readOnlyHint: true },
+  }, run(async ({ id }) => rc.assets.operation({ id })));
 
   server.registerTool('roblox_resources', {
     title: 'List supported Roblox resources',

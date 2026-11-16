@@ -6,7 +6,7 @@
 2. **CLI**: `rsc ...`
 3. **MCP server**: ให้ Claude หรือ AI ตัวอื่นเรียกใช้
 
-ตอนนี้รองรับ **Game Pass** และ **Developer Product** แล้ว ส่วนระบบอื่นเพิ่มทีหลังได้ (ดูหัวข้อ "เพิ่มระบบใหม่")
+ตอนนี้รองรับ **Game Pass**, **Developer Product** และ **อัปโหลด Asset** (โมเดล 3D `.fbx/.gltf/.glb/.rbxm`, Animation `.rbxmx`) พร้อม **ตัวตรวจสิทธิ์ API Key** ที่บอกว่าขาดสิทธิ์อะไร ส่วนระบบอื่นเพิ่มทีหลังได้ (ดูหัวข้อ "เพิ่มระบบใหม่")
 
 > Roblox ไม่มีคำสั่งลบ Game Pass และ Developer Product คำสั่ง `remove` / `off-sale` ในโปรแกรมนี้จึงเป็นการ **ปิดขาย** แทน
 
@@ -14,16 +14,37 @@
 
 ```bash
 npm install
-cp .env.example .env
+cp .env.template .env
 ```
 
-ใส่ค่าในไฟล์ `.env` ด้วยตัวเอง:
+ใส่ค่าในไฟล์ `.env` ด้วยตัวเอง (คำอธิบายเต็ม (ไทย + อังกฤษ) อยู่ใน `.env.template`):
 
-- `ROBLOX_API_KEY`: สร้างที่ https://create.roblox.com/dashboard/credentials
-  - ให้สิทธิ์แค่ `game-pass` (read, write) และ `developer-product` (read, write)
-  - จำกัดให้ใช้ได้แค่เกมที่ต้องการ
-  - ถ้ามี IP ที่ใช้ประจำ ให้ตั้ง IP ไว้ด้วย
-- `ROBLOX_UNIVERSE_ID`: เกมที่จะใช้เป็นค่าเริ่มต้น (ของ Soap Rush คือ `10770155309`)
+- `ROBLOX_API_KEY`: สร้างที่ https://create.roblox.com/dashboard/credentials (อัปโหลดในนามกลุ่ม → สร้างคีย์ในหน้ากลุ่มนั้น)
+- `ROBLOX_UNIVERSE_ID`: เกมเริ่มต้นสำหรับ Game Pass / Developer Product (Creator Dashboard → เกม → "Copy Universe ID")
+- `ROBLOX_GROUP_ID` หรือ `ROBLOX_USER_ID`: เจ้าของ asset ที่อัปโหลด (แนะนำกลุ่มที่เป็นเจ้าของเกม)
+
+### สิทธิ์ที่ต้องกดอนุญาตให้ API Key (Access Permissions → Add API System)
+
+| ระบบที่จะใช้ | API System | ติ๊ก | เลือก resource |
+|---|---|---|---|
+| Game Pass | `game-pass` | Read + Write | เกมที่จะจัดการ |
+| Developer Product | `developer-product` | Read + Write | เกมที่จะจัดการ |
+| อัปโหลดโมเดล 3D | `asset` | Read + Write | – (คีย์ของกลุ่มเจ้าของ) |
+| อัปโหลด Animation | `asset` | Read + Write | – (คีย์ของกลุ่มเจ้าของ) |
+
+`asset` ต้องมี Read ด้วย เพราะหลังอัปโหลดต้องอ่านผล operation เพื่อเอา `assetId` กลับมา
+ถ้ามี IP ที่ใช้ประจำ ให้ตั้งไว้ในหัวข้อ Security ด้วย
+
+### ตรวจว่าคีย์ขาดสิทธิ์อะไร
+
+```bash
+node bin/rsc.js permissions                 # ใช้เกม/กลุ่มจาก .env
+node bin/rsc.js permissions --universe 123 --group 456 --json
+```
+
+ถาม Roblox ตรงๆ (`POST /api-keys/v1/introspect`) ว่าคีย์มี scope อะไร ผูกกับเกม/กลุ่มไหน แล้วแสดง ✅/❌/⚠️ ต่อสิทธิ์ พร้อมสรุปว่า**ขาดอะไร**และวิธีไปกดเพิ่ม (exit code 1 ถ้าขาด)
+- ถ้าคีย์ใช้ไม่ได้ (401) จะบอกว่า "API Key ใช้ไม่ได้" แทนการบอกว่าขาดสิทธิ์
+- ทุกคำสั่งที่โดน 401/403 จะมีบรรทัด `[สิทธิ์] น่าจะขาดสิทธิ์ "..."` ต่อท้าย error ให้ด้วย
 
 ห้ามส่ง API Key ในแชต ห้ามใส่ในโค้ด และห้าม commit ไฟล์ `.env` (ไฟล์นี้อยู่ใน `.gitignore` แล้ว)
 
@@ -77,10 +98,22 @@ node bin/rsc.js game-passes list
 node bin/rsc.js developer-products create --name "1 Aura Spin" --price 999 --for-sale
 node bin/rsc.js game-passes update 123456 --price 499 --icon ./icon.png
 node bin/rsc.js game-passes off-sale 123456
-node bin/rsc.js developer-products bulk-create examples/soaprush/developer-products.json --dry-run
+node bin/rsc.js developer-products bulk-create items.json --dry-run      # ดูก่อนว่าจะสร้างอะไร
+node bin/rsc.js developer-products bulk-create items.json
+node bin/rsc.js game-passes bulk-update updates.json
 node bin/rsc.js developer-products export          # { "ชื่อ": id }
 node bin/rsc.js game-passes export --csv
+
+node bin/rsc.js permissions
+node bin/rsc.js assets upload-model "E:/path/VoxelDuck.fbx" --name VoxelDuck            # กลุ่มจาก ROBLOX_GROUP_ID
+node bin/rsc.js assets upload-animation "E:/path/Quack.rbxmx" --name MyDuck_Quack --group 1234567
+node bin/rsc.js assets get 115715787591006
+node bin/rsc.js assets operation <operationId>                                          # ถ้าอัปโหลดแล้วรอนานเกิน
 ```
+
+อัปโหลด asset เป็นของถาวรและผ่าน moderation ของ Roblox (ลบผ่าน API ไม่ได้) ผลที่ได้: `{ assetId, rbxassetid, assetType, moderation, creator }`
+- Animation รับเฉพาะ `.rbxmx/.rbxm` ที่เป็น KeyframeSequence — FBX animation อัปโหลดตรงไม่ได้ (โปรแกรมจะเตือนก่อนส่ง)
+- Module: `await rc.assets.uploadModel({ filePath, displayName })`, `await rc.assets.uploadAnimation({ filePath, groupId })`, `await rc.checkPermissions()`
 
 ถ้าจะใช้เกมอื่น ให้เพิ่ม `--universe <id>`
 
@@ -93,7 +126,7 @@ node bin/rsc.js game-passes export --csv
   "mcpServers": {
     "roblox-studio-connect": {
       "command": "node",
-      "args": ["E:/Github/Bot Js/Roblox Studio Connect/bin/rsc-mcp.js"]
+      "args": ["E:/Github/Java Script/roblox-open-cloud-api-mcp/bin/rsc-mcp.js"]
     }
   }
 }
@@ -101,7 +134,11 @@ node bin/rsc.js game-passes export --csv
 
 Key จะอ่านจาก `.env` ในโฟลเดอร์โปรเจกต์ จึงไม่ต้องใส่ Key ในไฟล์ตั้งค่า MCP
 
-Tools ที่ได้ (ชื่อ resource คือ `game_passes` และ `developer_products`):
+Tools ที่ได้:
+- `roblox_check_permissions` ตรวจสิทธิ์คีย์ คืน `missing` + `reportForUser` (ภาษาไทย) ให้ Claude บอกคนทำว่าต้องไปกดอนุญาตอะไร
+- `assets_upload_model`, `assets_upload_animation`, `assets_get`, `assets_operation`, `assets_create`
+
+ของ Game Pass / Developer Product (ชื่อ resource คือ `game_passes` และ `developer_products`):
 - `roblox_resources`
 - `<resource>_list`
 - `<resource>_get`
@@ -111,7 +148,9 @@ Tools ที่ได้ (ชื่อ resource คือ `game_passes` แล�
 - `<resource>_bulk_create`
 - `<resource>_bulk_update`
 
-ทุก tool รับ `universeId` ได้ ถ้าไม่ใส่จะใช้ค่าจาก `.env`
+tool ของ Game Pass / Developer Product รับ `universeId` ได้ ถ้าไม่ใส่จะใช้ค่าจาก `.env`
+
+เซิร์ฟเวอร์ส่งคำแนะนำ (instructions) ให้ Claude: ให้เรียก `roblox_check_permissions` ก่อนเขียนครั้งแรกและทุกครั้งที่เจอ 401/403 แล้วบอกผู้ใช้ว่าขาด scope ไหน และให้ยืนยันกับผู้ใช้ก่อนอัปโหลด asset
 
 ## เพิ่มระบบใหม่ (เช่น Badges, Data Stores, Places)
 
@@ -137,19 +176,20 @@ npm test
 
 ชุดทดสอบใช้ Roblox API จำลอง จึงไม่ต้องใช้ Key จริง
 
-## ไฟล์ตัวอย่าง Soap Rush
+## รูปแบบไฟล์ JSON สำหรับ bulk
 
-`examples/soaprush/` มีรายการทั้ง 71 รายการ (Game Pass 16 + Developer Product 55) ทุกตัวราคา 999 และเปิดขาย
-
-ไอคอนใช้รูปชุดเดียวกับในร้าน Robux ของเกม (Free Icon Pack v3.1, 1st Outline 256px) ตั้งค่าด้วยคำสั่งนี้:
-```bash
-node examples/soaprush/pack-icons.js        # สร้าง icon-updates.*.json
-node bin/rsc.js game-passes bulk-update examples/soaprush/icon-updates.game-passes.json
-node bin/rsc.js developer-products bulk-update examples/soaprush/icon-updates.developer-products.json
+`bulk-create` (ชื่อที่มีอยู่แล้วจะข้าม จึงรันซ้ำได้):
+```json
+[
+  { "name": "100 Coins", "description": "Adds 100 coins", "price": 99, "isForSale": true, "iconPath": "./icons/coins.png" },
+  { "name": "VIP", "price": 499, "isForSale": true }
+]
 ```
 
-```bash
-node bin/rsc.js game-passes bulk-create examples/soaprush/game-passes.json --dry-run
-node bin/rsc.js game-passes bulk-create examples/soaprush/game-passes.json
-node bin/rsc.js developer-products bulk-create examples/soaprush/developer-products.json
+`bulk-update` (ต้องมี `id` ใส่เฉพาะฟิลด์ที่จะเปลี่ยน):
+```json
+[
+  { "id": 123456, "price": 149 },
+  { "id": 789012, "isForSale": false, "iconPath": "./icons/vip.png" }
+]
 ```
